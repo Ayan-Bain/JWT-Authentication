@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const usersRoutes = require('./routes/users.js');
+const cookieParser = require('cookie-parser');
 const app = express();
 app.use(express.static('public'));
+app.use(cookieParser());
 app.set('view engine', 'ejs')
 app.use(bodyParser.json());
 app.use(usersRoutes);
