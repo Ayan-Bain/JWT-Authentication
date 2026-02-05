@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .main-heading {
+        margin-bottom: 2.5rem;
+    }
+    .sign-in-up-form {
+        height: min-content;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-bar {
+        display: flex;
+        width: 100%;
+        padding-right: 2%;
+        padding-left: 2%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-buttons {
+        display: flex;
+    }
+    .nav-bar button {
+        margin-left: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 16px;
+        border-width: 1px;
+    }
+</style>
+</head>
+<body>
+    <div class="sign-in-up-form">
+        <nav class="nav-bar">
+            <h1>Ayan's User Database</h1>
+            <div class="nav-buttons">
+                <button class="sign-in">Sign In</button>
+                <button class="sign-up">Sign Up</button>
+            </div>
+        </nav>
+    </div>
+    <script>
+        const signInBtn = document.querySelector('.sign-in');
+        const signUpBtn = document.querySelector('.sign-up');
+        signInBtn.addEventListener('click', function() {
+            window.location.href='/signin'
+        })
+        signUpBtn.addEventListener('click', function() {
+            window.location.href='/signup'
+        })
+    </script>
+</body>
+</html>
