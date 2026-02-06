@@ -30,6 +30,8 @@ npm run dev
 npm run serve
 ```
 
+## Go to [link](localhost:4000). to visit the site 
+
 ## Copyright
 
 &copy; Ayan Bain
