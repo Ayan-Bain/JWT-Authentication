@@ -15,7 +15,12 @@ npm install
 ```notepad
 []
 ``` 
+## Create environment variable
+### Create .env file at root
 
+```notepad
+JWT_SECRET = 'YOUR_JWT_SECRET'
+```
 
 ## Usage
 
