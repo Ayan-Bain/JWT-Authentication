@@ -38,20 +38,34 @@
         <nav class="nav-bar">
             <h1>Ayan's User Database</h1>
             <div class="nav-buttons">
+                <% if(user) {%>
+                <span class="welcome">Welcome, <%=user.email%></span>
+                <button class="log-out">Log Out</button>
+                <% }else { %>
                 <button class="sign-in">Sign In</button>
                 <button class="sign-up">Sign Up</button>
+                <% } %>
             </div>
         </nav>
     </div>
     <script>
-        const signInBtn = document.querySelector('.sign-in');
-        const signUpBtn = document.querySelector('.sign-up');
-        signInBtn.addEventListener('click', function() {
-            window.location.href='/signin'
-        })
-        signUpBtn.addEventListener('click', function() {
-            window.location.href='/signup'
-        })
+        const user = <%- JSON.stringify(user || null) %>;
+        if(user) {
+            const logOutBtn = document.querySelector('.log-out');
+            logOutBtn.addEventListener('click', function() {
+                window.location.href='/logout'
+            })
+        }
+        else {
+            const signInBtn = document.querySelector('.sign-in');
+            const signUpBtn = document.querySelector('.sign-up');
+            signInBtn.addEventListener('click', function() {
+                window.location.href='/signin'
+            })
+            signUpBtn.addEventListener('click', function() {
+                window.location.href='/signup'
+            })
+        }
     </script>
 </body>
 </html>

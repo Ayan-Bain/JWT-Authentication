@@ -6,7 +6,8 @@ const {
   delete_user_by_id,
   update_user_by_id,
   signup,
-  signin
+  signin,
+  logout
 } = require("../controllers/AuthController.js");
 
 const router = express.Router();
@@ -22,5 +23,7 @@ router.patch("/users/:id", update_user_by_id);
 router.post('/signup', signup);
 
 router.post('/signin', signin);
+
+router.get('/logout', logout);
 
 module.exports = router;
